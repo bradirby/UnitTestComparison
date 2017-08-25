@@ -1,14 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace NuGetMSTestProject
+namespace UnitTestProject1
 {
     [AttributeUsage(AttributeTargets.All)]
-    class MyAttribute : System.Attribute { }
+    class MyAttribute : System.Attribute
+    {
+
+    }
 
     [TestClass]
     [Serializable]
@@ -21,6 +20,7 @@ namespace NuGetMSTestProject
 
         [Flags]
         enum MyEnum { }
+
 
         [AssemblyCleanup]
         [AssemblyInitialize]
@@ -39,7 +39,7 @@ namespace NuGetMSTestProject
         [Ignore("asdf")]
         [LoaderOptimization(1)]
         [MTAThread]
-        [Obsolete("asdf")]
+        [Obsolete]
         [Owner("asd")]
         [ParamArray]
         [Priority(1)]
@@ -52,7 +52,10 @@ namespace NuGetMSTestProject
         [TestProperty("propName", "propVal")]
         [Timeout(20)]
         [WorkItem(1)]
-        public void AttributeSupportTestMethod() { }
+        public void AttributeSupportTestMethod()
+        {
+
+        }
 
 
     }

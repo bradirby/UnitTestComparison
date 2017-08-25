@@ -1,12 +1,14 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTestProject1
+namespace UnitTestProjectVS2015
 {
+    [AttributeUsage(AttributeTargets.All)]
+    class MyAttribute : System.Attribute { }
+
     [TestClass]
     [Serializable]
-    [AttributeUsage(AttributeTargets.All)]
-    public class NugetAttributeSupportTest
+    public class UnitTestPrjAttributeSupportTest
     {
         [ContextStatic]
         [ThreadStatic]
@@ -30,15 +32,15 @@ namespace UnitTestProject1
         [DeploymentItem("asdf")]
         [Description("asdf")]
         [ExpectedException(typeof(ArgumentException))]
-        [HostType]
+        [HostType("asdf")]
         [Ignore("asdf")]
         [LoaderOptimization(1)]
         [MTAThread]
-        [Obsolete]
+        [Obsolete("asdf")]
         [Owner("asd")]
         [ParamArray]
         [Priority(1)]
-        [Shadowing]
+        [Shadowing("asdf")]
         [STAThread]
         [TestCategory("asd")]
         [TestCleanup]
@@ -47,10 +49,7 @@ namespace UnitTestProject1
         [TestProperty("propName", "propVal")]
         [Timeout(20)]
         [WorkItem(1)]
-        public void AttributeSupportTestMethod()
-        {
-
-        }
+        public void AttributeSupportTestMethod() { }
 
 
     }
