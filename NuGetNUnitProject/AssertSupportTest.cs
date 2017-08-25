@@ -14,6 +14,8 @@ namespace NuGetNUnitProject
         public void AssertSupportMethodTest()
         {
             var sut = new SystemUnderTest();
+            
+            Assert.That("asdf", Is.Not.Null);
 
             Assert.AreEqual(null, sut);
             Assert.AreEqual<string>(null, "asdf");
