@@ -17,8 +17,7 @@ namespace UnitTestProjectVS2015
 
         [Flags]
         enum MyEnum { }
-
-
+        
         [AssemblyCleanup]
         [AssemblyInitialize]
         [ClassCleanup]
@@ -26,19 +25,18 @@ namespace UnitTestProjectVS2015
         [CLSCompliant(true)]
         [CssIteration("asdf")]
         [CssProjectStructure("asdf")]
-        [DataRow(0)]
+        //[DataRow(0)]
         [DataSource("asd")]
-        [DataTestMethod]
+        //[DataTestMethod]
         [DeploymentItem("asdf")]
         [Description("asdf")]
         [ExpectedException(typeof(ArgumentException))]
         [HostType("asdf")]
-        [Ignore("asdf")]
+       // [Ignore("asdf")] //text not supported
         [LoaderOptimization(1)]
         [MTAThread]
         [Obsolete("asdf")]
         [Owner("asd")]
-        [ParamArray]
         [Priority(1)]
         [Shadowing("asdf")]
         [STAThread]

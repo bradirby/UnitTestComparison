@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
+using NUnit.Framework.Internal.Execution;
 
 namespace NuGetNUnitProject
 {
@@ -30,6 +31,7 @@ namespace NuGetNUnitProject
         [ContextStatic]
         [Datapoint]
         [NonSerialized]
+        [ThreadStatic]
         private string FieldDeclaration;
 
         [Apartment(ApartmentState.MTA)]

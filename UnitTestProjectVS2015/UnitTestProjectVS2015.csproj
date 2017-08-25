@@ -53,6 +53,12 @@
     <Compile Include="AttributeSupportTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrjToTest\PrjToTest.csproj">
+      <Project>{c1241ca5-1cc5-41a0-8319-8fa82a7136c7}</Project>
+      <Name>PrjToTest</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
